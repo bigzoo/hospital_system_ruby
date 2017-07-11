@@ -38,4 +38,12 @@ describe(Doctor) do
     end
   end
 
+  describe('#==') do
+    it('it is the same if it has the same name') do
+      doctor1 = Doctor.new(name:'Daktari',speciality:'Heart',id:nil)
+      doctor2 = Doctor.new(name:'Daktari',speciality:'Heart',id:nil)
+      expect(doctor1).to(eq(doctor2))
+    end
+  end
+
 end
