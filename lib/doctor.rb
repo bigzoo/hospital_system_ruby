@@ -19,4 +19,9 @@ class Doctor
     end
     doctors
   end
+
+  define_method(:save) do
+    result = DB.exec("INSERT INTO doctors (name, speciality) VALUES ('#{@name}','#{@speciality}') RETURNING id;")
+    @id = result.first.fetch('id').to_i
+  end
 end
