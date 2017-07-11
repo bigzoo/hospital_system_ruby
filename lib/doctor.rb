@@ -24,4 +24,8 @@ class Doctor
     result = DB.exec("INSERT INTO doctors (name, speciality) VALUES ('#{@name}','#{@speciality}') RETURNING id;")
     @id = result.first.fetch('id').to_i
   end
+
+  define_method(:==) do |another_doctor|
+    name.==(another_doctor.name).&(id.==(another_doctor.id))
+  end
 end
