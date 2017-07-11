@@ -30,4 +30,12 @@ describe(Doctor) do
     end
   end
 
+  describe('#save') do
+    it('saves a new doctor in the database') do
+      new_doctor = Doctor.new(name:'Daktari',speciality:'Heart',id:nil)
+      new_doctor.save
+      expect(Doctor.all).to(eq([new_doctor]))
+    end
+  end
+
 end
