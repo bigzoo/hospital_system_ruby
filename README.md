@@ -20,3 +20,4 @@ by: Chris Nyaga and Lewis Nyoike
 Use `$ rspec` to run tests
 
 ## LICENSE
+[MIT LICENSE]()
