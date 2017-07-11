@@ -46,4 +46,12 @@ describe(Doctor) do
     end
   end
 
+  describe('.find') do
+    it('returns a doctor using the id') do
+      doctor1 = Doctor.new(name:'Daktari',speciality:'Heart',id:nil)
+      doctor1.save
+      doctor2 = Doctor.find(doctor1.id)
+      expect(doctor1).to(eq(doctor2))
+    end
+  end
 end
