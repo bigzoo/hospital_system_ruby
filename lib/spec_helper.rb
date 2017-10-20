@@ -4,6 +4,7 @@ require('patient')
 require('pg')
 
 
+
 DB = PG.connect(dbname: 'hospital_test')
 
 RSpec.configure do |config|

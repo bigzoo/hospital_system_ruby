@@ -36,4 +36,8 @@ class Doctor
     end
     found_doctor
   end
+
+  # define_method(:patients) do |id|
+  #
+  # end
 end
